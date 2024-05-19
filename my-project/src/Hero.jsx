@@ -7,7 +7,7 @@ function Hero() {
     const { isDarkMode } = useHeader();
 
     return (
-        <div className={`flex justify-center items-center h-screen ${isDarkMode ? 'bg-white text-black' : 'bg-[#252128] text-white'}`}>
+        <div className={`flex justify-center items-center  py-16  ${isDarkMode ? 'bg-white text-black' : 'bg-[#252128] text-white'}`}>
             <div className="flex justify-between items-center max-w-8xl mx-auto px-8">
                 <div className="flex flex-col justify-center items-start max-w-xl">
                     <div className="flex items-center mb-4">
@@ -20,20 +20,20 @@ function Hero() {
                         Hi, I’m Almila. I’m a full-stack developer. If you are looking for a Developer who to craft solid and scalable frontend products with great user experiences. Let’s shake hands with me.
                     </p>
                     <div className="flex space-x-3">
-                        <button className={`text-lg leading-7 font-medium ${isDarkMode ? 'bg-[#3730A3] text-white' : 'bg-white text-[#3730A3]'} px-8 py-3 rounded-lg`}>Hire me</button>
+                        <button className={`text-lg leading-7 font-medium ${isDarkMode ? 'bg-[#3730A3] text-white' : 'bg-[#BAB2E7] text-[#252128]'} px-8 py-3 rounded-lg`}>Hire me</button>
 
-                        <button className={`text-lg leading-7 font-medium bg-white text-[#3730A3] px-8 py-3 rounded-lg flex items-center ${isDarkMode ? 'dark:bg-[#FFFFFF] dark:text-[#E1E1FF]' : 'dark:bg-white dark:text-[#3730A3]'}`} style={{ padding: "3px 7px", border: "2px solid #3730A3" }}>
-                            <img src={githubLogo} alt="Github" className="w-24 h-6 mr-2" />
+                        <button className={`text-lg  font-medium bg-white text-[#3730A3] px-8 py-3 rounded-lg flex items-center ${isDarkMode ? 'dark:bg-[#FFFFFF] dark:text-[#E1E1FF]' : 'dark:bg-[#383838] dark:text-[#3730A3]'}`} style={{ padding: "3px 7px", border: "2px solid #3730A3" }}>
+                            <img src={githubLogo} alt="Github" className="" />
                         </button>
 
-                        <button className={`text-lg leading-7 font-medium  text-[#3730A3] px-8 py-3 rounded-lg flex items-center ${!isDarkMode ? 'dark:bg-[#FFFFFF] dark:text-[#3730A3]' : 'dark:bg-white dark:text-[#3730A3]'}`} style={{ padding: "3px 7px", border: "2px solid #3730A3" }}>
+                        <button className={`text-lg leading-7 font-medium  text-[#3730A3] px-8 py-3 rounded-lg flex items-center ${!isDarkMode ? 'bg-[#383838] dark:text-[#3730A3]' : 'bg-[#FFFFFF] dark:text-[#3730A3]'}`} style={{ padding: "3px 7px", border: "2px solid #3730A3" }}>
                             <img src={linkedinLogo} alt="Linkedin" className="w-6 h-6 mr-1" />
                             Linkedin
                         </button>
                     </div>
                 </div>
                 <div>
-                    <img src="./src/resim.svg" alt="Almila Su" className="w-148 h-148 rounded-lg object-cover" />
+                    <img src="./src/resim.svg" alt="Almila Su" className="w-256 h-256 rounded-lg  object-cover" />
                 </div>
             </div>
         </div>
