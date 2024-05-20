@@ -9,6 +9,7 @@ export function useHeader() {
 export function HeaderProvider({ children }) {
     const [isDarkMode, setIsDarkMode] = useState(true);
     const [activeButton, setActiveButton] = useState(null);
+    const [isTurkish, setIsTurkish] = useState(true);
 
     const toggleMode = () => {
         setIsDarkMode(!isDarkMode);
@@ -16,6 +17,15 @@ export function HeaderProvider({ children }) {
 
     const handleClick = (button) => {
         setActiveButton(button);
+        window.scrollBy({
+            top: 1600,
+
+            behavior: 'smooth'
+        })
+    };
+
+    const toggleLanguage = () => {
+        setIsTurkish(!isTurkish);
     };
 
     const value = {
@@ -23,6 +33,8 @@ export function HeaderProvider({ children }) {
         toggleMode,
         activeButton,
         handleClick,
+        isTurkish,
+        toggleLanguage,
     };
 
     return <HeaderContext.Provider value={value}>{children}</HeaderContext.Provider>;
